@@ -1,6 +1,6 @@
 <?php
 
-//teacher solution
+//teacher solution 19.10.2023
     $phraseToTest = "ad   a...";
 
 
