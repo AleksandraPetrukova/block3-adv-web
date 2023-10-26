@@ -1,6 +1,5 @@
 <?php
 
-//hw - 25.10
 //headphones 
 //model __construct
 //color __construct
@@ -16,6 +15,7 @@ $globalId = 0;
 
 class Headphone {
 
+    private $accountNumber;
     private $batteryLevel = 100;
     private $volume = 50;
     private $on = false;
@@ -23,8 +23,12 @@ class Headphone {
     public function __construct (private $model, private $color, private $size) {
         global $globalId;
         $globalId++;
+        $this->accountNumber = $globalId;
     }
 
+    public function getId() {
+        return $this->accountNumber;
+    }
     public function getModel() {
         return $this->model;
     }
@@ -85,7 +89,8 @@ class Headphone {
 }
 
 $headphone1 = new Headphone("Sony WH-1000XM4", "White", "Large");
-echo "Model: ", $headphone1->getModel(), 
+echo "id: ", $headphone1-> getId();
+echo "</br> Model: ", $headphone1->getModel(), 
 "</br> color: ", $headphone1->getColor(), 
 "</br>  size: ", $headphone1->getSize(), 
 "</br>  battery level: ", 
@@ -97,6 +102,33 @@ echo $headphone1->isActive() ? $headphone1->loseBatteryLevel(50) : "</br> The he
 echo "</br>  battery level: ", $headphone1->getBatteryLevel();
 echo $headphone1->isActive() ? "its on" : $headphone1->turnOn();
 echo "</br>  on: ", $headphone1->isActive() ? "its on" : "its off";
+echo $headphone1->isActive() ? $headphone1->volumeUp() : "</br> The headphones are off";
+echo "</br>  volume: ", $headphone1->getVolume();
+echo $headphone1->isActive() ? $headphone1->volumeDown() : "</br> The headphones are off";
+echo "</br>  volume: ", $headphone1->getVolume();
+
+echo "</br>";
+echo "</br>";
+echo "</br>";
+
+$headphone1 = new Headphone("Beats Solo3", "Red", "Small");
+echo "id: ", $headphone1-> getId();
+echo "</br> Model: ", $headphone1->getModel(), 
+"</br> color: ", $headphone1->getColor(), 
+"</br>  size: ", $headphone1->getSize(), 
+"</br>  battery level: ", 
+$headphone1->getBatteryLevel(), 
+"</br>  on: ", $headphone1->isActive() ? "its on" : "its off";
+echo $headphone1->isActive() ? $headphone1->volumeUp() : "</br> The headphones are off";
+echo "</br>  volume: ", $headphone1->getVolume();
+echo $headphone1->isActive() ? $headphone1->loseBatteryLevel(100) : "</br> The headphones are off";
+echo "</br>  battery level: ", $headphone1->getBatteryLevel();
+echo $headphone1->isActive() ? "its on" : $headphone1->turnOn();
+echo "</br>  on: ", $headphone1->isActive() ? "its on" : "its off";
+echo $headphone1->isActive() ? $headphone1->loseBatteryLevel(101) : "</br> The headphones are off";
+echo "</br>  battery level: ", $headphone1->getBatteryLevel();
+echo $headphone1->isActive() ? $headphone1->volumeUp() : "</br> The headphones are off";
+echo "</br>  volume: ", $headphone1->getVolume();
 echo $headphone1->isActive() ? $headphone1->volumeUp() : "</br> The headphones are off";
 echo "</br>  volume: ", $headphone1->getVolume();
 echo $headphone1->isActive() ? $headphone1->volumeDown() : "</br> The headphones are off";
