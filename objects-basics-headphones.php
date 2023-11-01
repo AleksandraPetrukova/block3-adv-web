@@ -8,6 +8,7 @@
 //lose charge
 //turn on/off
 // private volume 
+// overall add logic better inside the function
 
 ini_set('display_errors', 1);
 
@@ -15,10 +16,10 @@ $globalId = 0;
 
 class Headphone {
 
-    private $accountNumber;
+    private $accountNumber; //serial number
     private $batteryLevel = 100;
     private $volume = 50;
-    private $on = false;
+    private $on = false; // isOn 
 
     public function __construct (private $model, private $color, private $size) {
         global $globalId;
@@ -41,7 +42,7 @@ class Headphone {
     public function getBatteryLevel() {
         return $this->batteryLevel;
     }
-    public function loseBatteryLevel($amount) {
+    public function loseBatteryLevel($amount) { 
         if ($this->batteryLevel - $amount >= 0) {
             $this->batteryLevel -= $amount;
         } else {
@@ -55,7 +56,7 @@ class Headphone {
             $this->batteryLevel = 100;
         }
     }
-    public function isActive() {
+    public function isActive() { // echo add here
         return $this->on;
     }
     public function turnOn() {
@@ -70,8 +71,8 @@ class Headphone {
     private function setVolume($volume) {
         $this->volume = $volume;
     }
-    public function volumeUp() {
-        if ($this->volume >= 100) {
+    public function volumeUp() {  // checking if its active or not add here
+        if ($this->volume >= 100) { // enought only >
             echo "Volume 100%";
         }
         else {
