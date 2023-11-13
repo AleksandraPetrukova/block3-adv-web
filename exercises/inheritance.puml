@@ -1,0 +1,88 @@
+@startuml
+
+class BankAccount {
+    #$balance
+    +__construct()
+    +deposit()
+    +withdraw()
+}
+
+class SavingsAccount extends BankAccount {
+    +withdraw()
+}
+
+class Person {
+    #firstName
+    #lastName
+    +__construct()
+    +getFirstName()
+    +getLastName()
+}
+
+class EmployeeNew extends Person {
+    #employeeId
+    +__construct()
+    +getEmployeeId()
+    +getLastName()
+}
+
+
+class VehicleNew {
+    #make
+    #model
+    #year
+    #fuelType
+    +__construct()
+    +fuelEfficiency()
+    +distanceTraveled()
+    +maxSpeed()
+}
+
+class Truck extends VehicleNew {
+    +fuelEfficiency()
+    +distanceTraveled()
+    +maxSpeed()
+}
+
+class CarNew extends VehicleNew {
+    +fuelEfficiency()
+    +distanceTraveled()
+    +maxSpeed()
+}
+
+class Motorcycle extends VehicleNew {
+    +fuelEfficiency()
+    +distanceTraveled()
+    +maxSpeed()
+}
+
+
+class NewEmployee {
+    #name
+    #address
+    #salary
+    #jobTitle
+    +__construct()
+    +calculateBonus()
+    +performanceReport()
+    +manageProjects()
+}
+
+class Manager extends NewEmployee {
+    +calculateBonus()
+    +performanceReport()
+    +manageProjects()
+}
+
+class Developer extends NewEmployee {
+    +calculateBonus()
+    +performanceReport()
+    +manageProjects()
+}
+
+class Programmer extends NewEmployee {
+    +calculateBonus()
+    +performanceReport()
+    +manageProjects()
+}
+@enduml
