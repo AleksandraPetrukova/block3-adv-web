@@ -1,0 +1,2 @@
+<h1>404 - NOT FOUND</h1>
+<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In tenetur recusandae doloremque. Rerum ab ut facilis assumenda, quo nisi, voluptatem iste fuga exercitationem, temporibus velit repudiandae hic eos obcaecati sapiente!</p>
