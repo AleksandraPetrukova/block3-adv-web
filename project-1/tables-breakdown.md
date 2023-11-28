@@ -27,6 +27,7 @@
 - toy_name
 - toy_price
 - description
+- amount
 
 # Toy_Species Association Table:
 - toy_species_id - Primary Key
