@@ -11,13 +11,14 @@ class Species {
     +get_description()
 }
 
-class Breed extends Species {
+class Breed {
     #breed_id
     #breed_name
     #species_id
     #average_size
     #average_weight
     #description
+    #is_purebred
     +__construct()
     +get_breed_name()
     +get_species_name()
@@ -27,7 +28,7 @@ class Breed extends Species {
     +get_description()
 }
 
-class Pet extends Breed {
+class Pet {
     #pet_id
     #pet_name
     #breed_id
@@ -61,5 +62,9 @@ class Toy {
     +add_toy()
 }
 
+Species <|-- Breed
+Breed <|-- Pet
+
+Species --> Toy : db connection
 
 @enduml

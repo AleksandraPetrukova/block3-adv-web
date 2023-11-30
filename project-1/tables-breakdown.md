@@ -1,3 +1,5 @@
+## Pet Store Table
+
 # Species Table
 - species_id - Primary Key
 - species_name
@@ -10,6 +12,7 @@
 - species_id - Foreign Key referencing Species table
 - average_size
 - description
+- maintenance
 
 # Pet Table
 - pet_id - Primary Key
@@ -34,12 +37,5 @@
 - toy_id
 - species_id
 
-OR
-
-# Toy_Pet Association Table:
-
-- toy_pet_id - Primary Key
-- toy_id
-- pet_id
 
 Is it better to make toy-species association or toy-pet one?
