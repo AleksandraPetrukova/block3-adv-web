@@ -12,10 +12,6 @@ ALTER TABLE `pets` ADD CONSTRAINT `breed_id` FOREIGN KEY (`breed_id`) REFERENCES
 
 CREATE TABLE `Aleksandra14_pet_store`.`toys` (`toy_id` INT NOT NULL AUTO_INCREMENT , `toy_name` VARCHAR(256) NOT NULL , `toy_price` INT NOT NULL , `toy_description` VARCHAR(256) NOT NULL , `toy_amount` INT NOT NULL , PRIMARY KEY (`toy_id`)) ENGINE = InnoDB;
 
--- CREATE TABLE `Aleksandra14_pet_store`.`toy_species` (`toy_species_id` INT NOT NULL AUTO_INCREMENT , `toy_id` INT NOT NULL , `species_id` INT NOT NULL , PRIMARY KEY (`toy_species_id`)) ENGINE = InnoDB;
-
--- ALTER TABLE `toy_species` ADD CONSTRAINT `toy_id` FOREIGN KEY (`toy_id`) REFERENCES `toys`(`toy_id`) ON DELETE RESTRICT ON UPDATE RESTRICT; ALTER TABLE `toy_species` ADD CONSTRAINT `species_id` FOREIGN KEY (`species_id`) REFERENCES `species`(`species_id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
-
 CREATE TABLE `Aleksandra14_pet_store`.`toy_species` (`toy_species_id` INT NOT NULL AUTO_INCREMENT , `species_id` INT NOT NULL , `toy_id` INT NOT NULL , PRIMARY KEY (`toy_species_id`)) ENGINE = InnoDB;
 
-ALTER TABLE `toy_species` ADD CONSTRAINT `species_id` FOREIGN KEY (`species_id`) REFERENCES `species`(`species_id`) ON DELETE RESTRICT ON UPDATE RESTRICT; ALTER TABLE `toy_species` ADD CONSTRAINT `toy_id` FOREIGN KEY (`toy_id`) REFERENCES `toys`(`toy_id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+ALTER TABLE `toy_species` ADD CONSTRAINT `species` FOREIGN KEY (`species_id`) REFERENCES `species`(`species_id`) ON DELETE RESTRICT ON UPDATE RESTRICT; ALTER TABLE `toy_species` ADD CONSTRAINT `toy_id` FOREIGN KEY (`toy_id`) REFERENCES `toys`(`toy_id`) ON DELETE RESTRICT ON UPDATE RESTRICT;

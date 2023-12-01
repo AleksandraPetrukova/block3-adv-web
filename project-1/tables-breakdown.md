@@ -18,11 +18,11 @@
 - pet_id - Primary Key
 - pet_name
 - breed_id - Foreign Key referencing Breeds table
-- price
-- age
-- gender
-- date_of_birth
-- health_information
+- pet_price
+- pet_age
+- pet_gender
+- pet_date_of_birth
+- pet_health_information
 
 *** Question for net two tables: is it better to separate or not
 # Toys Table
