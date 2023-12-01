@@ -1,3 +1,5 @@
+
+-- Create database species
 CREATE TABLE `Aleksandra14_pet_store`.`species` (`species_id` INT NOT NULL AUTO_INCREMENT , `species_name` VARCHAR(256) NOT NULL , `species_avg_lifespan` VARCHAR(256) NOT NULL , `species_description` VARCHAR(256) NOT NULL , PRIMARY KEY (`species_id`)) ENGINE = InnoDB;
 
 -- not sure about breed_avg_size type - int or varchar?
@@ -15,3 +17,4 @@ CREATE TABLE `Aleksandra14_pet_store`.`toys` (`toy_id` INT NOT NULL AUTO_INCREME
 CREATE TABLE `Aleksandra14_pet_store`.`toy_species` (`toy_species_id` INT NOT NULL AUTO_INCREMENT , `species_id` INT NOT NULL , `toy_id` INT NOT NULL , PRIMARY KEY (`toy_species_id`)) ENGINE = InnoDB;
 
 ALTER TABLE `toy_species` ADD CONSTRAINT `species` FOREIGN KEY (`species_id`) REFERENCES `species`(`species_id`) ON DELETE RESTRICT ON UPDATE RESTRICT; ALTER TABLE `toy_species` ADD CONSTRAINT `toy_id` FOREIGN KEY (`toy_id`) REFERENCES `toys`(`toy_id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
