@@ -15,10 +15,9 @@ class Breed {
     #breed_id
     #breed_name
     #species_id
-    #average_size
-    #average_weight
+    #avg_size_id
     #description
-    #is_purebred
+    #maintenance_id
     +__construct()
     +get_breed_name()
     +get_species_name()
@@ -34,7 +33,7 @@ class Pet {
     #breed_id
     #price 
     #age
-    #gender
+    #gender_id
     #date_of_birth
     #health_information
     +__construct()
