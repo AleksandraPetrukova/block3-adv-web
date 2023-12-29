@@ -1,28 +1,28 @@
+<h2>All Species</h2>
 
-
-    <table border="1">
-    <thead>
-    <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Age</th>
-        <th>Description</th>
-    </tr>
-    </thead>
-    <tbody>
+<article>
     <?php
         if($users) {
             foreach($users as $user) {
-                echo "<tr>
-                        <td>" . $user['species_id'] . "</td>
-                        <td>" . $user['species_name'] . "</td>
-                        <td>" . $user['species_avg_lifespan'] . "</td>
-                        <td>" . $user['species_description'] . "</td>
-                    </tr>";
+                echo "<section class='card'>
+                        <div class='top'>
+                            <div class='id'>" . $user['species_id'] . "</div>
+                            <div class='name'>" . $user['species_name'] . "</div>
+                            <div class='lifespan'>" . $user['species_avg_lifespan'] . "</div>
+                            <div class='description'>" . $user['species_description'] . "</div>
+                        </div>
+                        <div class='buttons'>
+                            <form method='POST'>
+                                <input type='hidden' name='species_id' value='" . $user['species_id'] . "'>
+                                <div class='button-container'>
+                                    <input type='submit' name='editSpecies' value='Edit'  class='submit-button'>
+                                </div>
+                            </form>
+                        </div>
+                    </section>";
             }
         } else {
             echo 'No users found';
         }
     ?>
-    </tbody>
-</table>
+</article>

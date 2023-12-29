@@ -39,7 +39,7 @@ INSERT INTO `maintenance` (`maintenance_id`, `maintenance_name`) VALUES (NULL, '
 INSERT INTO `maintenance` (`maintenance_id`, `maintenance_name`) VALUES (NULL, 'Low')
 
 -- Insert data into table species
-INSERT INTO `species` (`species_id`, `species_name`, `species_avg_lifespan`, `species_description`) VALUES (NULL, 'Cat', '12-18 years', 'Cats, small carnivorous mammals known as Felis catus, are agile and independent companions. With diverse breeds and sleek bodies, they\'re skilled groomers and climbers, forming strong bonds with humans. Expressive through vocalizations and body language, cats thrive on a meat-rich diet. Domesticated cats are cherished for their affection and entertainment in households globally.'), (NULL, 'Dog', '10-13 years', 'Dogs, or Canis lupus familiaris, are loyal and diverse companions. With various breeds, they range in size, coat, and temperament. Known for their social nature, dogs form strong bonds with humans, providing loyalty and companionship. As omnivores, they thrive on a balanced diet. Dogs enrich households worldwide with their affection and versatility.');
+INSERT INTO `species` (`species_id`, `species_name`, `species_avg_lifespan`, `species_description`) VALUES (NULL, 'Cat', '12-18 years', 'Cats, Felis catus, are agile companions with diverse breeds, skilled groomers, and climbers. Expressive through vocalizations, they thrive on a meat-rich diet. Domesticated cats are cherished for affection and entertainment globally.'), (NULL, 'Dog', '10-13 years', 'Dogs, Canis lupus familiaris, diverse in size, coat, and temperament, form strong bonds, offering loyalty and companionship. Thriving on a balanced diet as omnivores, they enrich households globally with affection and versatility.');
 
 -- Insert data into table avg_size
 INSERT INTO `avg_size` (`avg_size_id`, `avg_size_name`) VALUES (NULL, 'Small'), (NULL, 'Medium');
@@ -69,6 +69,13 @@ FROM pets
 NATURAL JOIN breeds
 NATURAL JOIN species
 NATURAL JOIN gender
+NATURAL JOIN maintenance;
+
+-- Show all breed info
+SELECT breeds.*, species.species_name, maintenance.maintenance_name, avg_size.avg_size_name
+FROM breeds
+NATURAL JOIN avg_size
+NATURAL JOIN species
 NATURAL JOIN maintenance;
 
 -- Show all info with pet, breed, species
@@ -102,3 +109,5 @@ NATURAL JOIN species
 NATURAL JOIN gender
 NATURAL JOIN maintenance
 WHERE pet_price > 500;
+
+SELECT breeds.*, species.species_name, avg_size.avg_size_name, maintenance.maintenance_name FROM breeds JOIN species ON breeds.species_id = species.species_id JOIN avg_size ON breeds.avg_size_id = avg_size.avg_size_id JOIN maintenance ON breeds.maintenance_id = maintenance.maintenance_id;
