@@ -207,3 +207,22 @@ form input[type="submit"] {
     grid-column: span 2;
     font-size: 17px;
 }
+
+.closeX {
+    display: flex; 
+    justify-content: flex-end; 
+    width: 80%; 
+    font-size: 30px; 
+    margin-bottom: 30px;
+}
+
+.closeX a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+}
+
+.closeX a:hover {
+    transform: rotate(90deg);
+}

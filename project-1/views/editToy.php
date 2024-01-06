@@ -1,3 +1,11 @@
+<h2>Edit Toy</h2>
+
+<div class="closeX">
+    <a href="?page=toys">
+        <i class="fa-solid fa-xmark"></i>
+    </a>
+</div>
+
 <form action="" method="POST">
     <input type="hidden" name="toy_id" value="<?php echo $toy['toy_id']; ?>">
 

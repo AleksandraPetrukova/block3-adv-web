@@ -39,7 +39,7 @@
             else {
                 echo "<p>Failed to add!</p>";
             }
-            $this->showSpecies();
+            // $this->showSpecies();
         }
 
         public function updateSpeciesForm() {
@@ -256,6 +256,9 @@
     
     if (isset($_POST['submitPet'])) {
         $controller->addPet();
+    }
+    elseif (isset($_POST['submit'])) {
+            $controller->add();
     }
     elseif (isset($_POST['deletePet'])) {
         $controller->deletePet();

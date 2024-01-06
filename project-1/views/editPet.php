@@ -1,3 +1,11 @@
+<h2>Edit Pet</h2>
+
+<div class="closeX">
+    <a href="?page=pets">
+        <i class="fa-solid fa-xmark"></i>
+    </a>
+</div>
+
 <form method="POST" action="?action=showpets">
     <input type="hidden" name="pet_id" value="<?php echo $pet['pet_id']; ?>">
 

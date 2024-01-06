@@ -1,5 +1,11 @@
 <h2>Edit Species</h2>
 
+<div class="closeX">
+    <a href="?page=species">
+        <i class="fa-solid fa-xmark"></i>
+    </a>
+</div>
+
 <form method="POST">
     <input type="hidden" name="species_id" value="<?php echo $species['species_id']; ?>">
 

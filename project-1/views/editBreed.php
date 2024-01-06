@@ -1,5 +1,11 @@
 <h2>Edit Breed</h2>
 
+<div class="closeX">
+    <a href="?page=breeds">
+        <i class="fa-solid fa-xmark"></i>
+    </a>
+</div>
+
 <form method="POST">
     <input type="hidden" name="breed_id" value="<?php echo $breed['breed_id']; ?>">
 
@@ -21,7 +27,6 @@
 
     <label for="">Avg size</label>
     <select name="avg_size_id">
-        <option value="">Select avg size</option>
         <?php
         foreach($avg_sizes as $avg_size) {
             $selected = ($avg_size['avg_size_id'] == $breed['avg_size_id']) ? 'selected' : '';
@@ -32,7 +37,6 @@
 
     <label for="">Maintenance</label>
     <select name="maintenance_id">
-        <option value="">Select avg size</option>
         <?php
         foreach($maintenances as $maintenance) {
             $selected = ($maintenance['maintenance_id'] == $breed['maintenance_id']) ? 'selected' : '';
@@ -47,6 +51,5 @@
     </textarea>
 
     <input type="submit" name="updateBreed" value="Update">
-    <a href="?page=breeds">Dismiss</a>
 
 </form>
