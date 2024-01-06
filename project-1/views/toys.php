@@ -17,6 +17,7 @@
                                 <input type='hidden' name='toy_id' value='" . $toy['toy_id'] . "'>
                                 <div class='button-container'>
                                     <input type='submit' name='editToy' value='Edit'  class='submit-button'>
+                                    <input type='submit' name='deleteToy' value='Delete' class='submit-button'>
                                 </div>
                             </form>
                         </div>

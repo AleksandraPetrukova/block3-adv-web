@@ -440,5 +440,17 @@
                 return false;
             }
         }
+
+        public function deleteToySpecies($toy_id) {
+            $mysqli = $this->connect();
+            if($mysqli) {
+                $mysqli->query("DELETE FROM toy_species WHERE toy_id = '$toy_id'");
+                $mysqli->query("DELETE FROM toys WHERE toy_id = '$toy_id'");
+                $mysqli->close();
+                return true;
+            } else {
+                return false;
+            }
+        }
     }
 ?>

@@ -237,6 +237,18 @@
             }
             // $this->showToys();
         }
+
+        public function deleteToySpecies() {
+            if(isset($_POST['deleteToy'])) {
+                $toy_id = $_POST['toy_id'];
+                if ($this->toyModel->deleteToySpecies($toy_id)) {
+                    echo "<p>Successfully deleted toy with ID: $toy_id</p>";
+                } else {
+                    echo "<p>Failed to delete toy with ID: $toy_id</p>";
+                }
+            }
+            // $this->showToys();
+        }
     }
 
     include_once ("controllers/connection.php");
@@ -287,6 +299,10 @@
     elseif (isset($_POST['updateToy'])) {
         $controller->updateToySpecies();
     }
+    elseif (isset($_POST['deleteToy'])) {
+        $controller->deleteToySpecies();
+    }
+    
 
     if (isset($_POST['editSpecies'])) {
         $controller->updateSpeciesForm();
