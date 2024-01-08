@@ -132,7 +132,8 @@
                             NATURAL JOIN breeds
                             NATURAL JOIN species
                             NATURAL JOIN gender
-                            NATURAL JOIN maintenance;");
+                            NATURAL JOIN maintenance
+                            ORDER by pets.pet_id;");
                 while($row = $result->fetch_assoc()) {
                     $results[] = $row;
                 }
@@ -221,7 +222,8 @@
                                             FROM breeds
                                             NATURAL JOIN avg_size
                                             NATURAL JOIN species
-                                            NATURAL JOIN maintenance;");
+                                            NATURAL JOIN maintenance
+                                            ORDER by breeds.breed_id;");
                 while($row = $result->fetch_assoc()) {
                     $results[] = $row;
                 }
