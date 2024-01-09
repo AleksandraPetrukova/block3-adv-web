@@ -1,3 +1,8 @@
+<div class="linea subnav">
+    <a href="?page=addspecie"> Add a Specie</a>
+</div>
+<div class="line"></div>
+
 <h2>All Species</h2>
 
 <article>

@@ -175,6 +175,19 @@ h2 {
     transform: translateY(-5px);
 }
 
+.subnav a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 25px;
+}
+
+.subnav a:hover {
+    transform: translateY(-5px);
+}
+
 form {
     display: grid;
     grid-template-columns: repeat(2, auto);

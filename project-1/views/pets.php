@@ -1,3 +1,11 @@
+
+<div class="linea subnav">
+    <a href="?page=addpet">Add a Pet</a>
+    <a href="?page=species">Species</a>
+    <a href="?page=breeds">Breeds</a>
+</div>
+<div class="line"></div>
+
 <h2>All Pets</h2>
 <article>
     <?php

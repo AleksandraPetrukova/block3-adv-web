@@ -1,3 +1,8 @@
+<div class="linea subnav">
+    <a href="?page=addbreed">Add a Breed</a>
+</div>
+<div class="line"></div>
+
 <h2>All Breeds</h2>
 <article>
     <?php
