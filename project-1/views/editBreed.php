@@ -46,9 +46,7 @@
     </select>
 
     <label for="breed_description">Description</label>
-    <textarea type="text" name="breed_description" placeholder="breed_description">
-    <?php echo $breed['breed_description']; ?>
-    </textarea>
+    <textarea type="text" name="breed_description" placeholder="Breed Description"><?php echo $breed['breed_description']; ?></textarea>
 
     <input type="submit" name="updateBreed" value="Update">
 

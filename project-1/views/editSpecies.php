@@ -16,9 +16,7 @@
     <input type="text" name="species_avg_lifespan" placeholder="Avg lifespan" value="<?php echo $species['species_avg_lifespan']; ?>">
 
     <label for="species_age">Description</label>
-    <textarea type="text" name="species_description" placeholder="Description" >
-        <?php echo $species['species_description']; ?>
-    </textarea>
+    <textarea type="text" name="species_description" placeholder="Description" ><?php echo $species['species_description']; ?></textarea>
 
     <input type="submit" name="updateSpecies" value="Update">
 </form>

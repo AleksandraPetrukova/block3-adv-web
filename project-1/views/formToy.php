@@ -1,5 +1,5 @@
 <h2>Add a Toy</h2>
-<form method="POST">
+<form method="POST" action="?action=showtoys">
     <label for="name">Name</label>
     <input type="text" name="toy_name" placeholder="Name" required>
 
@@ -25,8 +25,7 @@
     required>
 
     <label for="">Toy Description</label>
-    <textarea type="text" name="toy_description" placeholder="Toy Description" required>
-    </textarea>
+    <textarea type="text" name="toy_description" placeholder="Toy Description" required></textarea>
 
     <input type="submit" name="submitToy" value="Submit">
 

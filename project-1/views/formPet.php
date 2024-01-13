@@ -42,8 +42,7 @@
     <input type="date" name="pet_dob" placeholder="Date of Birth" required>
 
     <label for="">Health Info</label>
-    <textarea type="text" name="pet_health" placeholder="Health Info" required>
-    </textarea>
+    <textarea type="text" name="pet_health" placeholder="Health Info" required></textarea>
 
     <input type="submit" name="submitPet" value="Submit">
 

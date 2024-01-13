@@ -44,9 +44,7 @@
     <input type="date" name="pet_dob" placeholder="Date of Birth" value="<?php echo $pet['pet_dob']; ?>">
 
     <label for="pet_health">Health</label>
-    <textarea type="text" name="pet_health" placeholder="Health Info" value="">
-    <?php echo $pet['pet_health_info']; ?>
-    </textarea>
+    <textarea type="text" name="pet_health" placeholder="Health Info" value=""><?php echo $pet['pet_health_info']; ?></textarea>
 
     <input type="submit" name="updatePet" value="Update">
 </form>

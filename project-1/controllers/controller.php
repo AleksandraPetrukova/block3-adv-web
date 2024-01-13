@@ -35,6 +35,7 @@
             }
             else if ($this->model->insertSpecies($name, $life_span, $description)) {
                 echo "<p>Successfully added: $name, $life_span, $description!</p>";
+                // $this->showSpecies();
             }
             else {
                 echo "<p>Failed to add!</p>";
@@ -61,7 +62,7 @@
                     echo "<p>Failed to update species with ID: $species_id</p>";
                 }
             }
-            $this->showSpecies();
+            // $this->showSpecies();
         }
 
         public function showPets() {
@@ -346,6 +347,9 @@
         }
         elseif($_GET['action'] == 'showspecies') {
             $controller->showSpecies();
+        }
+        elseif($_GET['action'] == 'showtoys') {
+            $controller->showToySpecies();
         }
     }
 

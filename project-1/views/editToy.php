@@ -24,7 +24,7 @@
     </select>
 
     <label for="toy_description">Description</label>
-    <input type="text" name="toy_description" placeholder="toy_description" value="<?php echo $toy['toy_description']; ?>">
+    <textarea type="text" name="toy_description" placeholder="toy_description"><?php echo $toy['toy_description']; ?></textarea>
 
     <label for="toy_price">Price</label>
     <input type="text" name="toy_price" placeholder="toy_price" value="<?php echo $toy['toy_price']; ?>">

@@ -47,8 +47,7 @@
     ?>
 
     <label for="">Description</label>
-    <textarea type="text" name="breed_description" placeholder="breed_description" required>
-    </textarea>
+    <textarea type="text" name="breed_description" placeholder="Breed Description" required></textarea>
 
     <input type="submit" name="submitBreed" value="Submit">
 
