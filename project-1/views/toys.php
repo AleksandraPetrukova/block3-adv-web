@@ -1,9 +1,12 @@
+
+
+<h2>All Toys</h2>
+
 <div class="linea subnav">
     <a href="?page=addtoy">Add a toy</a>
 </div>
-<div class="line"></div>
+<!-- <div class="line"></div> -->
 
-<h2>All Toys</h2>
 <article>
     <?php
         if($toys) {
