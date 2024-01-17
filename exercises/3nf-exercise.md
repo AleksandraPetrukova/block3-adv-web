@@ -196,7 +196,7 @@
 | U5 | St2 | 05.05.03 | Tut3 | PhF | 632 | 4.9 | Dummlers | tut3@fhbb.ch |
 | U4 | St2 | 04.07.03 | Tut5 | AVQ | 621 | 5.0 | SwissTopo | tut5@fhbb.ch |
 
- - Tutor Info
+ - Tutor Info - 
  - Unit info
  - Student -> grade info
  - Date -> topic info

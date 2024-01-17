@@ -1,0 +1,69 @@
+@startuml
+
+class Species {
+    #species_id
+    #species_name
+    #average_lifespan
+    #description
+    +__construct()
+    +get_species_name()
+    +get_average_lifespan()
+    +get_description()
+}
+
+class Breed {
+    #breed_id
+    #breed_name
+    #species_id
+    #avg_size_id
+    #description
+    #maintenance_id
+    +__construct()
+    +get_breed_name()
+    +get_species_name()
+    +get_average_size()
+    +get_average_lifespan()
+    +get_average_weight()
+    +get_description()
+}
+
+class Pet {
+    #pet_id
+    #pet_name
+    #breed_id
+    #price 
+    #age
+    #gender_id
+    #date_of_birth
+    #health_information
+    +__construct()
+    +get_pet_name()
+    +get_breed_id()
+    +get_price()
+    +get_age()
+    +get_gender()
+    +get_date_of_birth()
+    +get_health_information()
+    +buy_pet()
+}
+
+class Toy {
+    #toy_id
+    #toy_name
+    #price
+    #description
+    #amount
+    +__construct()
+    +get_toy_name()
+    +get_price()
+    +get_description()
+    +remove_toy()
+    +add_toy()
+}
+
+Species <|-- Breed
+Breed <|-- Pet
+
+Species --> Toy : db connection
+
+@enduml
