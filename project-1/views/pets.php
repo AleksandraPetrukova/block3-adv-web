@@ -31,8 +31,9 @@
                             <form method='POST'>
                                 <input type='hidden' name='pet_id' value='" . $pet['pet_id'] . "'>
                                 <div class='button-container'>
-                                    <input type='submit' name='deletePet' value='Delete'  class='submit-button'>
                                     <input type='submit' name='editPet' value='Edit'  class='submit-button'>
+                                    <input type='submit' name='deletePet' value='Delete'  class='submit-button'>
+                                    
                                 </div>
                             </form>
                         </div>
