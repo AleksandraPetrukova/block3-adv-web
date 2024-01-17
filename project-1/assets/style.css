@@ -222,6 +222,11 @@ form input[type="submit"] {
     font-size: 17px;
 }
 
+form input[type="submit"]:hover {
+    background-color: #c9c6c6;
+    cursor: pointer;
+}
+
 .closeX {
     display: flex; 
     justify-content: flex-end; 
@@ -240,3 +245,5 @@ form input[type="submit"] {
 .closeX a:hover {
     transform: rotate(90deg);
 }
+
+
